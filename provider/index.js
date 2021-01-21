@@ -8,15 +8,14 @@ import FireblazeAffiliates from '@fireblaze/affiliates/provider';
 
 const Fireblaze = (props) => props.children;
 
-const withFireblazeInterface = (Component) => (props) => {
-    return props.interface ? (
+const withFireblazeInterface = (Component) => (props) =>
+    props.interface ? (
         <FireblazeInterface args={props.interface}>
             <Component {...props} />
         </FireblazeInterface>
     ) : (
         <Component {...props} />
     );
-};
 
 const withFireblazeDatabase = (Component) => (props) =>
     props.database ? (

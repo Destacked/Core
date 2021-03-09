@@ -1,7 +1,8 @@
 {
     "name": "@destacked/core",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "description": "",
+    "private": false,
     "main": "index.js",
     "scripts": {
         "dev": "next dev",

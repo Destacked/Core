@@ -1,6 +1,6 @@
 {
     "name": "@destacked/core",
-    "version": "0.1.10",
+    "version": "0.1.11",
     "description": "",
     "private": false,
     "main": "index.js",
@@ -31,7 +31,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/DestackedJS/Core"
+        "url": "git+https://github.com/Destacked/Core"
     },
     "keywords": [
         "destacked",
@@ -40,7 +40,7 @@
     "author": "Abruptive",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/DestackedJS/Core/issues"
+        "url": "https://github.com/Destacked/Core/issues"
     },
-    "homepage": "https://github.com/DestackedJS/Core#readme"
+    "homepage": "https://github.com/Destacked/Core#readme"
 }

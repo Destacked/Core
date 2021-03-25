@@ -1,4 +1,4 @@
-import FireblazeInterface from '@fireblaze/interface/provider';
+import FireblazeInterface from '@destacked/interface/provider';
 
 const withDestackedInterface = (Component) => (props) =>
     props.interface ? (

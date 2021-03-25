@@ -56,7 +56,7 @@ export default compose(
 
     (chain) => {
         try {
-            require.resolve('@fireblaze/interface');
+            require.resolve('@destacked/interface');
             return withDestackedInterface(chain);
         } catch (e) {
             return chain;

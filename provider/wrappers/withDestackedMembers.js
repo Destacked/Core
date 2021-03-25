@@ -1,10 +1,10 @@
-import FireblazeMembers from '@fireblaze/members/provider';
+import DestackedMembers from '@destacked/members/provider';
 
 const withDestackedMembers = (Component) => (props) =>
     props.members ? (
-        <FireblazeMembers args={props.members}>
+        <DestackedMembers args={props.members}>
             <Component {...props} />
-        </FireblazeMembers>
+        </DestackedMembers>
     ) : (
         <Component {...props} />
     );

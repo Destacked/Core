@@ -43,7 +43,7 @@ export default compose(
 
     (chain) => {
         try {
-            require.resolve('@fireblaze/members');
+            require.resolve('@destacked/members');
             return withDestackedMembers(chain);
         } catch (e) {
             return chain;

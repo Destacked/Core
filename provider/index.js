@@ -9,6 +9,7 @@ import withDestackedMembers from './wrappers/withDestackedMembers';
 import withDestackedInterface from './wrappers/withDestackedInterface';
 import withDestackedAffiliates from './wrappers/withDestackedAffiliates';
 import withDestackedMarketing from './wrappers/withDestackedMarketing';
+import withDestackedPay from './wrappers/withDestackedPay';
 
 /**
  * Create the core component.
@@ -84,6 +85,19 @@ export default compose(
         try {
             require.resolve('@destacked/marketing');
             return withDestackedMarketing(chain);
+        } catch (e) {
+            return chain;
+        }
+    },
+
+    /**
+     * Chain "Destacked Pay" providers.
+     */
+
+    (chain) => {
+        try {
+            require.resolve('@destacked/pay');
+            return withDestackedPay(chain);
         } catch (e) {
             return chain;
         }

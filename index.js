@@ -6,6 +6,7 @@ import withDestackedMembers from './wrappers/withDestackedMembers';
 import withDestackedInterface from './wrappers/withDestackedInterface';
 import withDestackedAffiliates from './wrappers/withDestackedAffiliates';
 import withDestackedMarketing from './wrappers/withDestackedMarketing';
+import withDestackedSupport from './wrappers/withDestackedSupport';
 import withDestackedPay from './wrappers/withDestackedPay';
 import { useDestackedCore } from './provider';
 
@@ -27,5 +28,6 @@ export default compose(
     withDestackedInterface,
     withDestackedAffiliates,
     withDestackedMarketing,
+    withDestackedSupport,
     withDestackedPay
 )(Destacked);

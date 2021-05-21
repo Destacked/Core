@@ -50,9 +50,9 @@ const ExampleProvider = ({ args, children }) => (
 
 const withExample =
     (Component) =>
-    ({ provider, ...props }) =>
+    ({ args, ...props }) =>
         (
-            <ExampleProvider args={provider}>
+            <ExampleProvider args={args}>
                 <Component {...props} />
             </ExampleProvider>
         );
@@ -107,7 +107,38 @@ export default client;
 {% endtab %}
 {% endtabs %}
 
-### Structuring Your Client
+#### Structuring Your Client
 
 When building your provider client function, you can use [React hooks](https://reactjs.org/docs/hooks-intro.html), create functions, and more. Store any functions that do not depend on hooks in a functions subfolder as default exports, and import them to your client script.
+
+### Using the Provider & Hook
+
+To access values and functions returned by your client via your provider, you need to import the hook \(declared on line 44 in the example above\) in whatever component you need to access its values from.
+
+First, make sure the component is wrapped inside the `<ExampleProvider />` component, or the `withExample` function.
+
+{% hint style="info" %}
+You can pass props to your client through your ExampleProvider via the `args` prop \(as declared on line 18 or 33\). 
+{% endhint %}
+
+Then, in your component body, call the hook and only extract the values or functions you need [by destructuring the object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring) returned by your hook. You will see the structure below used across all Destacked modules and apps.
+
+#### Example
+
+```javascript
+import { withExample, useExample } from './example/provider';
+
+const Component = () => {
+    const { example } = useExample();
+
+    return (
+        <div>
+            {example}
+        </div>
+    );
+};
+
+export default withExample(Component);
+
+```
 

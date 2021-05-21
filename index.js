@@ -1,6 +1,4 @@
 import compose from 'compose-function';
-
-import withDestackedCore from './wrappers/withDestackedCore';
 import { withDestackedDatabase } from '@destacked/database';
 import { withDestackedMembers } from '@destacked/members';
 import { withDestackedInterface } from '@destacked/interface';
@@ -9,7 +7,9 @@ import { withDestackedAffiliates } from '@destacked/affiliates';
 import { withDestackedMarketing } from '@destacked/marketing';
 import { withDestackedSupport } from '@destacked/support';
 import { withDestackedPay } from '@destacked/support';
-import { useDestackedCore } from './provider';
+import { withDestackedGamification } from '@destacked/gamification';
+
+import { withDestackedCore, useDestackedCore } from './provider';
 
 /**
  * Core
@@ -31,5 +31,6 @@ export default compose(
     withDestackedAffiliates,
     withDestackedMarketing,
     withDestackedSupport,
-    withDestackedPay
+    withDestackedPay,
+    withDestackedGamification
 )(Destacked);

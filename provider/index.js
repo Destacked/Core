@@ -3,35 +3,62 @@ import { useContext, createContext } from 'react';
 import client from './client';
 
 /**
+ * Create the context object.
  *
+ * @see https://reactjs.org/docs/context.html#reactcreatecontext
  */
 
-const DestackedContext = createContext();
+const DestackedCoreContext = createContext();
 
 /**
+ * Create context the provider.
  *
- * @param {*} param0
- * @returns
+ * @see https://reactjs.org/docs/context.html#contextprovider
  */
 
 const DestackedCore = ({ args, children }) => (
-    <DestackedContext.Provider value={client({ args })}>
-        {children}
-    </DestackedContext.Provider>
+    <DestackedCoreContext.Provider value={client(args)}>
+        <ReferrerProvider>
+            <CommissionsProvider>{children}</CommissionsProvider>
+        </ReferrerProvider>
+    </DestackedCoreContext.Provider>
 );
 
 /**
+ * Create the higher order provider wrapper.
  *
- * @returns
+ * @see https://reactjs.org/docs/higher-order-components.html
+ */
+
+const withDestackedCore =
+    (Component) =>
+    ({ core, ...props }) =>
+        (
+            <DestackedCore args={core}>
+                <Component {...props} />
+            </DestackedCore>
+        );
+
+/**
+ * Create the custom provider hook.
+ *
+ * @see https://reactjs.org/docs/hooks-custom.html#using-a-custom-hook
  */
 
 const useDestackedCore = () => {
-    return useContext(DestackedContext);
+    const context = useContext(DestackedCoreContext);
+
+    if (!context) {
+        throw new Error(
+            `You must call useDestackedCore() inside of a <DestackedCore />, or a component wrapped in withDestackedCore().`
+        );
+    }
+
+    return context;
 };
 
 /**
- * Compose and export the Destacked core wrappers.
+ * Export the components.
  */
 
-export default DestackedCore;
-export { useDestackedCore };
+export { withDestackedCore, useDestackedCore };

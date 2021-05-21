@@ -123,6 +123,8 @@ You can pass props to your client through your ExampleProvider via the `args` pr
 
 Then, in your component body, call the hook and only extract the values or functions you need [by destructuring the object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#object_destructuring) returned by your hook. You will see the structure below used across all Destacked modules and apps.
 
+Every component called inside your Example component will also have access to the useExample hook and all values / functions declared in your provider client.
+
 #### Example
 
 {% code title="components/Example/index.js" %}

@@ -18,7 +18,7 @@ To keep things easy, integrate the code below and run a search and replace for t
 
 {% tabs %}
 {% tab title="Provider" %}
-{% code title="provider/index.js" %}
+{% code title="components/Example/provider/index.js" %}
 ```javascript
 import { useContext, createContext } from 'react';
 
@@ -86,7 +86,7 @@ export { ExampleProvider, withExample, useExample };
 {% endtab %}
 
 {% tab title="Client" %}
-{% code title="provider/client/index.js" %}
+{% code title="components/Example/provider/client/index.js" %}
 ```javascript
 /**
  * Create the provider value as a client function.
@@ -127,9 +127,9 @@ Then, in your component body, call the hook and only extract the values or funct
 
 {% code title="components/Example/index.js" %}
 ```javascript
-import { withExample, useExample } from './example/provider';
+import { withExample, useExample } from './provider';
 
-const Component = () => {
+const Example = () => {
     const { example } = useExample();
 
     return (
@@ -139,7 +139,7 @@ const Component = () => {
     );
 };
 
-export default withExample(Component);
+export default withExample(Example);
 
 ```
 {% endcode %}

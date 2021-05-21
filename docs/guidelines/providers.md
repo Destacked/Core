@@ -107,3 +107,7 @@ export default client;
 {% endtab %}
 {% endtabs %}
 
+### Structuring Your Client
+
+When building your provider client function, you can use [React hooks](https://reactjs.org/docs/hooks-intro.html), create functions, and more. Store any functions that do not depend on hooks in a functions subfolder as default exports, and import them to your client script.
+

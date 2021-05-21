@@ -1,13 +1,14 @@
 import compose from 'compose-function';
 
 import withDestackedCore from './wrappers/withDestackedCore';
-import withDestackedDatabase from './wrappers/withDestackedDatabase';
-import withDestackedMembers from './wrappers/withDestackedMembers';
-import withDestackedInterface from './wrappers/withDestackedInterface';
-import withDestackedAffiliates from './wrappers/withDestackedAffiliates';
-import withDestackedMarketing from './wrappers/withDestackedMarketing';
-import withDestackedSupport from './wrappers/withDestackedSupport';
-import withDestackedPay from './wrappers/withDestackedPay';
+import { withDestackedDatabase } from '@destacked/database';
+import { withDestackedMembers } from '@destacked/members';
+import { withDestackedInterface } from '@destacked/interface';
+import { withDestackedBlocks } from '@destacked/blocks';
+import { withDestackedAffiliates } from '@destacked/affiliates';
+import { withDestackedMarketing } from '@destacked/marketing';
+import { withDestackedSupport } from '@destacked/support';
+import { withDestackedPay } from '@destacked/support';
 import { useDestackedCore } from './provider';
 
 /**
@@ -26,6 +27,7 @@ export default compose(
     withDestackedDatabase,
     withDestackedMembers,
     withDestackedInterface,
+    withDestackedBlocks,
     withDestackedAffiliates,
     withDestackedMarketing,
     withDestackedSupport,

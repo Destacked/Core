@@ -6,7 +6,7 @@ import { withDestackedBlocks } from '@destacked/blocks';
 import { withDestackedAffiliates } from '@destacked/affiliates';
 import { withDestackedMarketing } from '@destacked/marketing';
 import { withDestackedSupport } from '@destacked/support';
-import { withDestackedPay } from '@destacked/support';
+import { withDestackedPay } from '@destacked/pay';
 import { withDestackedGamification } from '@destacked/gamification';
 
 import { withDestackedCore, useDestackedCore } from './provider';

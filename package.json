@@ -1,6 +1,6 @@
 {
     "name": "@destacked/core",
-    "version": "0.1.121",
+    "version": "0.1.122",
     "description": "",
     "private": false,
     "main": "index.js",
@@ -14,11 +14,11 @@
     },
     "peerDependencies": {
         "@destacked/affiliates": "^0.0.107",
-        "@destacked/blocks": "^1.1.286",
+        "@destacked/blocks": "^1.1.287",
         "@destacked/database": "^0.0.110",
         "@destacked/gamification": "^0.0.93",
-        "@destacked/helpers": "^1.1.61",
-        "@destacked/interface": "^1.1.86",
+        "@destacked/helpers": "^1.1.62",
+        "@destacked/interface": "^1.1.87",
         "@destacked/marketing": "^0.0.269",
         "@destacked/members": "^1.1.83",
         "@destacked/pay": "^0.0.92",

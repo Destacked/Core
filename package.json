@@ -1,6 +1,6 @@
 {
     "name": "@destacked/core",
-    "version": "0.1.203",
+    "version": "0.1.204",
     "description": "",
     "private": false,
     "main": "index.js",
@@ -13,16 +13,16 @@
         "compose-function": "^3.0.3"
     },
     "peerDependencies": {
-        "@destacked/affiliates": "^0.0.179",
-        "@destacked/blocks": "^1.1.360",
-        "@destacked/database": "^0.0.182",
-        "@destacked/gamification": "^0.0.165",
-        "@destacked/helpers": "^1.1.143",
-        "@destacked/interface": "^1.1.175",
-        "@destacked/marketing": "^0.0.341",
-        "@destacked/members": "^1.1.157",
-        "@destacked/pay": "^0.0.167",
-        "@destacked/support": "^0.0.168",
+        "@destacked/affiliates": "^0.0.180",
+        "@destacked/blocks": "^1.1.361",
+        "@destacked/database": "^0.0.183",
+        "@destacked/gamification": "^0.0.166",
+        "@destacked/helpers": "^1.1.144",
+        "@destacked/interface": "^1.1.176",
+        "@destacked/marketing": "^0.0.342",
+        "@destacked/members": "^1.1.158",
+        "@destacked/pay": "^0.0.168",
+        "@destacked/support": "^0.0.169",
         "classnames": "^2.3.1",
         "lodash": "^4.17.21",
         "next": "^11.1.2",
@@ -30,7 +30,7 @@
         "node-sass": "^6.0.1",
         "react": "^17.0.2",
         "react-dom": "^17.0.2",
-        "sass": "^1.39.2"
+        "sass": "^1.40.1"
     },
     "devDependencies": {
         "@babel/cli": "^7.15.4",

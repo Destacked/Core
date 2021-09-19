@@ -1,6 +1,6 @@
 {
     "name": "@destacked/core",
-    "version": "0.1.209",
+    "version": "0.1.210",
     "description": "",
     "private": false,
     "main": "index.js",
@@ -13,16 +13,16 @@
         "compose-function": "^3.0.3"
     },
     "peerDependencies": {
-        "@destacked/affiliates": "^0.0.184",
-        "@destacked/blocks": "^1.1.365",
-        "@destacked/database": "^0.0.187",
-        "@destacked/gamification": "^0.0.170",
-        "@destacked/helpers": "^1.1.149",
-        "@destacked/interface": "^1.1.180",
-        "@destacked/marketing": "^0.0.346",
-        "@destacked/members": "^1.1.164",
-        "@destacked/pay": "^0.0.172",
-        "@destacked/support": "^0.0.173",
+        "@destacked/affiliates": "^0.0.185",
+        "@destacked/blocks": "^1.1.366",
+        "@destacked/database": "^0.0.188",
+        "@destacked/gamification": "^0.0.171",
+        "@destacked/helpers": "^1.1.150",
+        "@destacked/interface": "^1.1.181",
+        "@destacked/marketing": "^0.0.347",
+        "@destacked/members": "^1.1.165",
+        "@destacked/pay": "^0.0.173",
+        "@destacked/support": "^0.0.174",
         "classnames": "^2.3.1",
         "lodash": "^4.17.21",
         "next": "^11.1.2",
@@ -33,7 +33,7 @@
         "sass": "^1.41.1"
     },
     "devDependencies": {
-        "@babel/cli": "^7.15.4",
+        "@babel/cli": "^7.15.7",
         "@babel/core": "^7.15.5",
         "@babel/preset-env": "^7.15.6",
         "@babel/preset-react": "^7.14.5",
